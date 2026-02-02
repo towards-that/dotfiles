@@ -11,6 +11,15 @@
 
 set $mod Mod4
 
+# Remove title bars for all windows
+for_window [class="^.*"] border pixel 1
+
+# Hide title bars in tabbed/stacked by using a 0-size font
+font pango:MesloLGM Nerd Font Mono 0
+
+
+bindsym $mod+space exec rofi -show window
+
 exec_always --no-startup-id xinput set-prop "Synaptics TM3075-002" "libinput Natural Scrolling Enabled" 1
 exec_always --no-startup-id xinput set-prop "Synaptics TM3075-002" "libinput Tapping Enabled" 1
 
@@ -141,10 +150,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+m floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+m focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
