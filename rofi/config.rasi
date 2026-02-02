@@ -1,7 +1,7 @@
 configuration {
     modi: [drun, run, window];
     show-icons: false;
-    font: "MesloLGM Nerd Font Mono 12";
+    font: "MesloLGM Nerd Font Mono 13";
     combi-modes: [window, drun, run];
 }
 
@@ -12,6 +12,7 @@ configuration {
     fg: #cdd6f4;
     accent: #cba6f7;
     border: #313244;
+    scrollColor: #464757;
 
     background-color: transparent;
     text-color: @fg;
@@ -66,16 +67,13 @@ element {
 }
 
 /* hovered / selected */
-element selected {
-    background-color: @bg-hover;
-    text-color: @accent;
-}
-/* selected item – initial + keyboard navigation */
+element selected,
 element selected.normal,
 element selected.active {
     background-color: @bg-hover;
     text-color: @accent;
 }
+
 
 
 /* kill alternate row styling */
@@ -93,3 +91,12 @@ element-text {
     background-color: transparent;
     text-color: inherit;
 }
+
+/* === SCROLLBAR === */
+scrollbar {
+    background-color: transparent;
+    handle-color: @scrollColor;
+    width: 6px;
+    margin: 0 4px 0 0;
+}
+
