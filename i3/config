@@ -24,7 +24,7 @@ exec_always --no-startup-id xinput set-prop "Synaptics TM3075-002" "libinput Nat
 exec_always --no-startup-id xinput set-prop "Synaptics TM3075-002" "libinput Tapping Enabled" 1
 
 # Sleep / Suspend
-bindsym $mod+Shift+s exec "systemctl suspend"
+bindsym $mod+Shift+s exec --no-startup-id ~/.config/rofi/powermenu.sh
 exec_always --no-startup-id xss-lock -- i3lock -c 000000 &
 
 # exec --no-startup-id greenclip daemon
@@ -77,7 +77,7 @@ bindsym $mod+Shift+w exec kitty -e nmtui
 
 
 exec --no-startup-id blueman-applet
-bindsym $mod+shift+b exec blueman-manager
+bindsym $mod+Shift+b exec kitty -e bluetoothctl
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
