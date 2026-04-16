@@ -41,7 +41,7 @@ exec_always --no-startup-id xss-lock -- i3lock -c 000000 &
 exec --no-startup-id gpaste-client
 bindsym $mod+v exec gpaste-client ui
 
-
+q
 # Screenshots
 bindsym Print exec --no-startup-id flameshot gui
 bindsym Shift+Print exec --no-startup-id flameshot full -c
@@ -150,7 +150,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+b split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
